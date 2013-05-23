@@ -33,10 +33,10 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include <stdlib.h>
 #include <signal.h>
 
-#include <SDL.h>
-#include <SDL_ttf.h>
+#include <SDL/SDL.h>
+#include <SDL/SDL_ttf.h>
 
-#include "version.h"
+//#include "version.h"
 
 #include "widget.h"
 #include "colour.h"
@@ -1682,7 +1682,7 @@ int main(int argc, char *argv[])
 	window_init(about_window);
 
 	label_init(l_about1);
-	label_put_text(l_about1, "NetWalk " VERSION_STRING);
+	label_put_text(l_about1, "NetWalk ");
 	window_add_widget(about_window, l_about1);
 
 	label_init(l_about2);

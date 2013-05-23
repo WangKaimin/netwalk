@@ -21,7 +21,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef WIDGET_H
 #define WIDGET_H
 
-#include <SDL.h>
+#include <SDL/SDL.h>
 
 enum {
     signal_activate = 0,

@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "config.h"
+#include "../config.h"
 
 #define DEFAULT_WINFONT "C:\\WINDOWS\\FONTS\\ARIAL.TTF"
 

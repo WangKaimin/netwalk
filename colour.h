@@ -21,7 +21,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef COLOUR_H
 #define COLOUR_H
 
-#include <SDL.h>
+#include <SDL/SDL.h>
 
 enum {
     c_darkshadow,
