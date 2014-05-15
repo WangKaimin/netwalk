@@ -18,7 +18,6 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
-#include <assert.h>
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -585,6 +584,8 @@ void set_video(int w, int h)
     flags = SDL_DOUBLEBUF;
 
     screen = SDL_SetVideoMode(w, h, 0, flags);
+    // flags = SDL_FULLSCREEN;
+    // screen = SDL_SetVideoMode(0, 0, 0, flags);
     init_ctable(screen->format);
 
     if (!screen) {
@@ -1387,7 +1388,7 @@ void hs_close(widget_ptr w, void *data)
 
 void set_level(widget_ptr w, void *data)
 {
-    level = (int) data;
+    level = (intptr_t) data;
     new_game();
 }
 
@@ -1631,7 +1632,7 @@ int main(int argc, char *argv[])
 	menuitem_ptr it;
 	menu_t m1, m2;
 
-	int i;
+	intptr_t i;
 
 	menubar_init(menu);
 	window_add_widget(root, menu);
